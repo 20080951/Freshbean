@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Freshbean</string>
+    <string name="shopTitle">FreshBean Coffee</string>
+    <string name="shopSubtitle">Please choose your roast</string>
+    <string name="purchaseButton">Purchase</string>
+    <string name="ground">Ground</string>
+    <string name="whole">Whole</string>
+    <string name="amount">Amount</string>
+    <string name="total">Total</string>
+    <string name="totalSoFar">$ Total price</string>
+    <string name="purchaseTitle">Your Purchases</string>
+    <string name="defaultAmount">00</string>
+    <string name="defaultMethod">N/A</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="action_purchase">Purchase</string>
+    <string name="action_purchases">Purchases</string>
+
 </resources>
