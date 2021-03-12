@@ -42,7 +42,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
             android:layout_toEndOf="@+id/amount"
-            android:text="blank"
+            android:text="@string/ground"
             android:textSize="24sp" />
 
     </RelativeLayout>
