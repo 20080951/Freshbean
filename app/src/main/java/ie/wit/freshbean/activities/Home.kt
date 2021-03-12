@@ -6,15 +6,20 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import ie.wit.freshbean.R
+import ie.wit.freshbean.fragments.BeansFragment
 import kotlinx.android.synthetic.main.app_bar_home.*
 import kotlinx.android.synthetic.main.home.*
 import org.jetbrains.anko.toast
 
 class Home : AppCompatActivity(),
         NavigationView.OnNavigationItemSelectedListener {
+
+    lateinit var ft: FragmentTransaction
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +40,12 @@ class Home : AppCompatActivity(),
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
+        ft = supportFragmentManager.beginTransaction()
+
+        val fragment = BeansFragment.newInstance()
+        ft.replace(R.id.homeFrame, fragment)
+        ft.commit()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -54,10 +65,26 @@ class Home : AppCompatActivity(),
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.action_beans -> toast("You Selected Donate")
+            R.id.action_purchases -> toast("You Selected Report")
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START))
             drawerLayout.closeDrawer(GravityCompat.START)
         else
             super.onBackPressed()
+    }
+
+    private fun navigateTo(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.homeFrame, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
