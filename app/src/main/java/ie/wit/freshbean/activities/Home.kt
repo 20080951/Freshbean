@@ -41,7 +41,7 @@ class Home : AppCompatActivity(),
 
         when (item.itemId) {
             R.id.nav_beans -> toast("You Selected Products")
-            R.id.nav_report -> toast("You Selected Orders")
+            R.id.nav_purchases -> toast("You Selected Orders")
 
             else -> toast("You Selected Something Else")
         }
