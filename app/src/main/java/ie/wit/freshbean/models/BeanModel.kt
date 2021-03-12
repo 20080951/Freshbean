@@ -8,3 +8,4 @@ data class BeanModel(
     var id: Long = 0,
     val orderType02: String = "N/A",
     val amount: Int = 0) : Parcelable
+

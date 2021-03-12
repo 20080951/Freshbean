@@ -51,8 +51,9 @@ class Home : AppCompatActivity(),
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.nav_beans -> toast("You Selected Products")
-            R.id.nav_purchases -> toast("You Selected Orders")
+            R.id.nav_beans -> navigateTo(BeansFragment.newInstance())
+            R.id.nav_purchases -> navigateTo(PurchasesFragment.newInstance())
+
 
             else -> toast("You Selected Something Else")
         }
@@ -87,4 +88,5 @@ class Home : AppCompatActivity(),
             .addToBackStack(null)
             .commit()
     }
+
 }
