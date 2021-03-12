@@ -1,7 +1,12 @@
 package ie.wit.freshbean.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import ie.wit.freshbean.R
 import ie.wit.freshbean.main.BeanApp
 import ie.wit.freshbean.models.BeanModel
@@ -35,6 +40,22 @@ class Beans : AppCompatActivity() {
 
         }
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_beans, menu)
+        return true
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when (item.itemId) {
+            R.id.action_purchases -> { startActivity(Intent(this, Purchases::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 }
+
+
 

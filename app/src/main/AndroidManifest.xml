@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Freshbean"
        >
+        <activity android:name=".activities.Purchases"></activity>
         <activity android:name=".activities.Beans">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

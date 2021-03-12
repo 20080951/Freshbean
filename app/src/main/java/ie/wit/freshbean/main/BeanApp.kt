@@ -12,6 +12,6 @@ class BeanApp : Application() {
     override fun onCreate() {
         super.onCreate()
         beansStore = BeanMemStore()
-        Log.v("Donate","Donation App started")
+        Log.v("Purchase","Beans App started")
     }
 }
