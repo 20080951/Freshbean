@@ -58,7 +58,7 @@ lateinit var app: BeanApp
             val amount = if(layout.price.text.isNotEmpty())
                 layout.price.text.toString().toInt() else{0}
 
-            val orderType02 = if(layout.orderType02.checkedRadioButtonId == R.id.ground02) "Badger and Dodo, GROUND" else "Badegr and Dodo, WHOLE"
+            val orderType02 = if(layout.orderType02.checkedRadioButtonId == R.id.ground02) "Badger and Dodo, GROUND" else "Badger and Dodo, WHOLE"
 
             totalPurchase += amount
             layout.totalSoFar.text = "$$totalPurchase"
