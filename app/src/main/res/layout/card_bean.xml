@@ -45,5 +45,8 @@
             android:text="@string/ground"
             android:textSize="24sp" />
 
+
     </RelativeLayout>
+
+
 </androidx.cardview.widget.CardView>

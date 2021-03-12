@@ -20,15 +20,15 @@ class Purchases : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_purchases)
 
-    app = this.application as BeanApp
-    recyclerView.setLayoutManager(LinearLayoutManager(this))
-    recyclerView.adapter = BeanAdapter(app.beansStore.findAll())
-}
+        app = this.application as BeanApp
+        recyclerView.setLayoutManager(LinearLayoutManager(this))
+        recyclerView.adapter = BeanAdapter(app.beansStore.findAll())
+    }
 
-            override fun onCreateOptionsMenu(menu: Menu): Boolean {
-                menuInflater.inflate(R.menu.menu_purchases, menu)
-                return true
-            }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_purchases, menu)
+        return true
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
